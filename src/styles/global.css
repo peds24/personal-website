@@ -1,0 +1,36 @@
+:root {
+    --primary-color: green;
+    --text-color: #000;
+    --hover-color: #fff;  /*add different hover */
+    --bg-color: #BDBDBD;
+    --font-family-primary: 'IBM Plex Mono', monospace;
+    --font-family-fallback: 'Courier New', Courier, monospace;
+    --font-size-base: 1rem;
+    --transition-duration: 0.3s;
+    --transition-ease: ease-in-out;    
+
+}
+#root{
+    background-color: var(--bg-color, #BDBDBD);
+    margin: 0;
+    color: var(--text-color);
+}
+body{
+    margin: 0;
+}
+a {
+    color: var(--primary-color, green);
+}
+
+a:visited {
+    color: var(--primary-color, green);
+}
+
+a:hover {
+    filter: invert();
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+}
