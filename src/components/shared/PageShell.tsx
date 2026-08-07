@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
-import ThemeSwitcher from '../main-page/ThemeSwitcher';
+import Wordmark from './Wordmark';
 import about from '../../data/about.json';
 import '../../styles/pages.css';
 
@@ -10,7 +11,9 @@ interface Props {
 }
 
 /**
- * Chrome for every page except home, which keeps its own two-column layout.
+ * Chrome for every page except home, which keeps its own single-screen stage.
+ * The status bar is the Longbox `LONGBOX · reading.tsx` motif, reused as the
+ * site's persistent header.
  */
 const PageShell: React.FC<Props> = ({ title, children }) => {
     React.useEffect(() => {
@@ -19,16 +22,29 @@ const PageShell: React.FC<Props> = ({ title, children }) => {
 
     return (
         <div className="page">
-            <header>
+            <div className="statusbar">
+                <Link className="statusbar-mark" to="/">
+                    <Wordmark />
+                </Link>
+                <span className="statusbar-file">{title}.tsx</span>
+            </div>
+
+            <header className="page-head">
                 <Navigation />
-                <ThemeSwitcher />
             </header>
-            <main>
-                <h1>{title}</h1>
+
+            <main className="page-main">
+                <div className="eyebrow page-eyebrow">
+                    <span className="path">~/{title}$</span>
+                    <span>cat *</span>
+                </div>
+                <h1 className="page-title">{title}</h1>
                 {children}
             </main>
-            <footer>
-                <p>© {new Date().getFullYear()} {about.name.toLowerCase()}</p>
+
+            <footer className="page-foot">
+                <span>© {new Date().getFullYear()} {about.name.toLowerCase()}</span>
+                <a href={`mailto:${about.email}`}>{about.email}</a>
             </footer>
         </div>
     );

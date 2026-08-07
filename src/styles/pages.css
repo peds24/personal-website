@@ -1,145 +1,278 @@
-/* Shared chrome for the non-home pages. Follows the home page's terminal
-   idiom: monospace, lowercase headings, accent-colored links. */
+/* Chrome for every page except home. Square corners, hairline rules, no shadows. */
 
 .page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family-primary), var(--font-family-fallback);
-    color: var(--text-color);
 }
 
-.page header {
-    padding: 1rem 0 0.5rem;
+/* Persistent status bar — the Longbox `LONGBOX · reading.tsx` motif. */
+.statusbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem var(--gutter);
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.page header .nav-bar {
+.statusbar-mark {
+    font-family: var(--font-round);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--text);
+}
+
+.statusbar-mark:hover {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.statusbar-mark .dot {
+    color: var(--accent);
+}
+
+.statusbar-file {
+    color: var(--muted);
+}
+
+.page-head {
+    padding: 1.25rem var(--gutter) 0;
+}
+
+.page-main {
+    flex: 1;
+    width: 100%;
+    max-width: 58rem;
+    margin: 0 auto;
+    padding: 3rem var(--gutter) 5rem;
+}
+
+.page-eyebrow {
     margin-bottom: 0.75rem;
 }
 
-.page .nav-bar .active {
-    text-decoration: underline;
+.page-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     font-weight: 700;
-}
-
-.page main {
-    flex: 1;
-    width: min(70rem, 92vw);
-    margin: 0 auto;
-    padding-bottom: 3rem;
-}
-
-.page h1 {
-    font-size: 2rem;
-    margin: 1rem 0 1.5rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 2.5rem;
 }
 
 .section-heading {
-    font-size: 1.25rem;
-    margin: 2.5rem 0 1rem;
-    border-top: 1px solid color-mix(in srgb, var(--text-color), transparent 70%);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    margin: 3.5rem 0 1rem;
     padding-top: 1rem;
+    border-top: 1px solid var(--border);
 }
 
-.page footer {
-    text-align: center;
-    font-size: 0.8rem;
-    opacity: 0.7;
-    padding: 1rem 0;
+.page-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.25rem var(--gutter);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.75rem;
 }
 
-/* --- projects --- */
+.page-foot a {
+    color: var(--muted);
+}
 
-.card-grid {
+.page-foot a:hover {
+    color: var(--accent);
+}
+
+.prose {
+    max-width: var(--measure);
+}
+
+.prose p {
+    margin: 0 0 1rem;
+}
+
+.prose strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ── projects: hairline rows that open in place ──────────────────── */
+
+.proj-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+}
+
+.proj-row {
+    border-bottom: 1px solid var(--border);
+}
+
+.proj-head {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid color-mix(in srgb, var(--text-color), transparent 75%);
-    background-color: color-mix(in srgb, var(--primary-color), transparent 92%);
-    overflow: hidden;
-}
-
-.project-image {
+    grid-template-columns: 2ch 1fr auto;
+    gap: 1.5ch;
+    align-items: baseline;
     width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
+    padding: 1.125rem 0;
+    background: none;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.proj-marker {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.proj-title {
+    font-size: 1.0625rem;
+    color: var(--text);
+    transition: color var(--transition-duration) var(--transition-ease);
+}
+
+.proj-head:hover .proj-title,
+.proj-head:focus-visible .proj-title {
+    color: var(--accent);
+}
+
+.proj-stack {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: right;
+}
+
+.proj-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 0 0 1.75rem 3.5ch;
+}
+
+.proj-panel[hidden] {
+    display: none;
+}
+
+.proj-shot {
+    width: 100%;
     display: block;
-    border-bottom: 1px solid color-mix(in srgb, var(--text-color), transparent 75%);
+    border: 1px solid var(--border);
+    background-color: var(--surface);
 }
 
-/* Phone screenshots: show the whole frame rather than cropping a landscape
-   slice out of the middle. Contained, so the aspect ratio is never distorted. */
-.project-image--portrait {
-    aspect-ratio: 4 / 3;
+/* Phone screenshots are tall — contain them instead of cropping to a sliver. */
+.proj-shot.is-portrait {
     object-fit: contain;
-    background-color: color-mix(in srgb, var(--text-color), transparent 92%);
-    padding: 0.5rem 0;
+    max-height: 22rem;
+    width: auto;
+    max-width: 100%;
 }
 
-.project-body {
-    padding: 1rem;
+.proj-detail {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    flex: 1;
+    gap: 0.6rem;
+    align-items: flex-start;
 }
 
-.project-body h2 {
-    font-size: 1.1rem;
+.proj-role {
     margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 
-.project-meta {
+.proj-desc {
     margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.75;
+    max-width: var(--measure);
+    font-size: 0.875rem;
+    color: var(--text);
 }
 
-.project-body p {
+.proj-go {
+    color: var(--accent);
+    font-size: 0.875rem;
+}
+
+.proj-private {
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-/* Push the link to the bottom so cards in a row align. */
-.project-body > :last-child {
-    margin-top: auto;
-    padding-top: 0.5rem;
-}
-
-.project-private {
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: 0.8125rem;
+    color: var(--muted);
     font-style: italic;
 }
 
-/* --- work experience --- */
+@media (max-width: 44rem) {
+    .proj-head {
+        grid-template-columns: 2ch 1fr;
+    }
+
+    .proj-stack {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .proj-panel {
+        grid-template-columns: 1fr;
+        padding-left: 3.5ch;
+    }
+}
+
+/* ── work experience ─────────────────────────────────────────────── */
 
 .job-card {
-    margin-bottom: 2rem;
-    border-left: 2px solid var(--primary-color);
-    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 2.25rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--border);
+}
+
+.job-card::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 0.6em;
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent);
 }
 
 .job-card h3 {
-    font-size: 1.15rem;
     margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--text);
 }
 
 .job-meta {
     margin: 0.15rem 0 0;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    color: var(--text);
 }
 
 .job-dates {
-    margin: 0.15rem 0 0.5rem;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    margin: 0.15rem 0 0.6rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
 }
 
 .job-card ul {
@@ -149,22 +282,51 @@
 
 .job-card li {
     margin-bottom: 0.4rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.875rem;
+    color: var(--muted);
+    max-width: var(--measure);
 }
 
-/* --- contact --- */
+.job-card li::marker {
+    color: var(--accent);
+}
+
+/* ── about ───────────────────────────────────────────────────────── */
+
+.portrait {
+    margin: 2.5rem 0;
+}
+
+.quote {
+    margin: 2.5rem 0;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--accent);
+    max-width: var(--measure);
+}
+
+.quote p {
+    margin: 0 0 0.5rem;
+    font-style: italic;
+    color: var(--text);
+}
+
+.quote cite {
+    font-style: normal;
+    font-size: 0.8125rem;
+    color: var(--muted);
+}
+
+/* ── contact ─────────────────────────────────────────────────────── */
 
 .contact-list {
     list-style: none;
     padding: 0;
+    margin: 1.5rem 0 0;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    font-size: 1.05rem;
 }
 
-@media (max-width: 40rem) {
-    .page h1 { font-size: 1.5rem; }
-    .nav-bar { flex-wrap: wrap; gap: 0.5rem; }
+.contact-list a {
+    font-size: 1rem;
 }

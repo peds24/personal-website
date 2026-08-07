@@ -1,0 +1,26 @@
+.ascii-torus {
+    margin: 0;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    line-height: 1;
+    white-space: pre;
+    /* Fixed character grid — scroll itself rather than push the page sideways. */
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 8px;
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent), transparent 80%);
+    user-select: none;
+}
+
+@media (max-width: 48rem) {
+    .ascii-torus {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 30rem) {
+    .ascii-torus {
+        font-size: 4.5px;
+    }
+}

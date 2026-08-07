@@ -1,6 +1,6 @@
 import React from 'react';
 import PageShell from '../components/shared/PageShell';
-import ProjectCard, { type Project } from '../components/projects/ProjectCard';
+import ProjectRow, { type Project } from '../components/projects/ProjectRow';
 import projects from '../data/projects.json';
 
 const Projects: React.FC = () => {
@@ -10,17 +10,17 @@ const Projects: React.FC = () => {
 
     return (
         <PageShell title="projects">
-            <section className="card-grid">
-                {featured.map(p => <ProjectCard key={p.id} project={p} />)}
-            </section>
+            <div className="proj-list">
+                {featured.map(p => <ProjectRow key={p.id} project={p} />)}
+            </div>
 
             {rest.length > 0 && (
-                <section>
+                <>
                     <h2 className="section-heading">alsoBuilt</h2>
-                    <div className="card-grid">
-                        {rest.map(p => <ProjectCard key={p.id} project={p} />)}
+                    <div className="proj-list">
+                        {rest.map(p => <ProjectRow key={p.id} project={p} />)}
                     </div>
-                </section>
+                </>
             )}
         </PageShell>
     );
