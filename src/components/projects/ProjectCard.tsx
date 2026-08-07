@@ -10,20 +10,22 @@ export interface Project {
     description: string;
     imageLarge: string;
     imageSmall: string;
+    /** Phone screenshots are tall; cropping them to a landscape box shows a useless sliver. */
+    imagePortrait?: boolean;
 }
 
 // Coursework that can't be published is stored with this sentinel rather than a URL.
 const isPrivate = (link: string) => !link || link === 'private';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-    const { title, role, languages, link, description, imageLarge } = project;
+    const { title, role, languages, link, description, imageLarge, imagePortrait } = project;
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
     return (
         <article className="project-card">
             {imageLarge && (
                 <img
-                    className="project-image"
+                    className={`project-image${imagePortrait ? ' project-image--portrait' : ''}`}
                     src={`${base}${imageLarge}`}
                     alt={`Screenshot of ${title}`}
                     loading="lazy"

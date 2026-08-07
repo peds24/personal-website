@@ -72,6 +72,15 @@
     border-bottom: 1px solid color-mix(in srgb, var(--text-color), transparent 75%);
 }
 
+/* Phone screenshots: show the whole frame rather than cropping a landscape
+   slice out of the middle. Contained, so the aspect ratio is never distorted. */
+.project-image--portrait {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background-color: color-mix(in srgb, var(--text-color), transparent 92%);
+    padding: 0.5rem 0;
+}
+
 .project-body {
     padding: 1rem;
     display: flex;
