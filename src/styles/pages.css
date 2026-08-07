@@ -18,7 +18,7 @@
     padding: 0.5rem var(--gutter);
     background-color: var(--surface);
     border-bottom: 1px solid var(--border);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -26,7 +26,7 @@
 .statusbar-mark {
     font-family: var(--font-round);
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 1rem;
     letter-spacing: -0.02em;
     text-transform: none;
     color: var(--text);
@@ -69,7 +69,7 @@
 }
 
 .section-heading {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -87,7 +87,7 @@
     padding: 1.25rem var(--gutter);
     border-top: 1px solid var(--border);
     color: var(--muted);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
 }
 
 .page-foot a {
@@ -144,7 +144,7 @@
 }
 
 .proj-title {
-    font-size: 1.0625rem;
+    font-size: 1.1875rem;
     color: var(--text);
     transition: color var(--transition-duration) var(--transition-ease);
 }
@@ -155,7 +155,7 @@
 }
 
 .proj-stack {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--muted);
     text-align: right;
 }
@@ -195,7 +195,7 @@
 
 .proj-role {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
@@ -204,18 +204,18 @@
 .proj-desc {
     margin: 0;
     max-width: var(--measure);
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text);
 }
 
 .proj-go {
     color: var(--accent);
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .proj-private {
     margin: 0;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     color: var(--muted);
     font-style: italic;
 }
@@ -257,20 +257,20 @@
 
 .job-card h3 {
     margin: 0;
-    font-size: 1.0625rem;
+    font-size: 1.1875rem;
     font-weight: 700;
     color: var(--text);
 }
 
 .job-meta {
     margin: 0.15rem 0 0;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--text);
 }
 
 .job-dates {
     margin: 0.15rem 0 0.6rem;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.06em;
     color: var(--muted);
 }
@@ -281,8 +281,8 @@
 }
 
 .job-card li {
-    margin-bottom: 0.4rem;
-    font-size: 0.875rem;
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
     color: var(--muted);
     max-width: var(--measure);
 }
@@ -312,7 +312,7 @@
 
 .quote cite {
     font-style: normal;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     color: var(--muted);
 }
 
@@ -328,5 +328,83 @@
 }
 
 .contact-list a {
-    font-size: 1rem;
+    font-size: 1.125rem;
+}
+
+/* ── tablet & phone ──────────────────────────────────────────────────
+   Breakpoints match the ASCII grids: 60rem is where the wide portrait starts
+   shrinking, 40rem is where it swaps to the coarse one. */
+
+/* Tablet */
+@media (max-width: 60rem) {
+    .page-main {
+        padding-top: 2.25rem;
+    }
+
+    .page-title {
+        margin-bottom: 2rem;
+    }
+
+    .nav-bar {
+        gap: 1.25rem;
+    }
+}
+
+/* Phone */
+@media (max-width: 40rem) {
+    :root {
+        --font-size-base: 1rem;
+    }
+
+    .statusbar {
+        font-size: 0.6875rem;
+    }
+
+    /* The nav is the only way around the site, so it stays reachable and
+       finger-sized rather than shrinking with everything else. */
+    .page-head {
+        padding-top: 1rem;
+    }
+
+    .nav-bar {
+        gap: 0.75rem 1.25rem;
+    }
+
+    .nav-bar a {
+        padding: 0.35rem 0;
+    }
+
+    .page-main {
+        padding-top: 1.75rem;
+        padding-bottom: 3rem;
+    }
+
+    .section-heading {
+        margin-top: 2.5rem;
+    }
+
+    .job-card {
+        margin-bottom: 1.75rem;
+    }
+
+    .page-foot {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+}
+
+@media (max-width: 26rem) {
+    .proj-title {
+        font-size: 1.0625rem;
+    }
+
+    .proj-panel,
+    .proj-head {
+        padding-left: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .proj-marker {
+        display: none;
+    }
 }

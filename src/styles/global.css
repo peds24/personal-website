@@ -38,7 +38,7 @@
     /* The one soft face, used only for the name — the poster's soft/rigid tension. */
     --font-round: ui-rounded, 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', system-ui, sans-serif;
 
-    --font-size-base: 0.9375rem;
+    --font-size-base: 1.0625rem;
     --measure: 64ch;
     --gutter: clamp(1.25rem, 5vw, 2.5rem);
     --transition-duration: 0.18s;
@@ -59,8 +59,10 @@ body {
     color: var(--text);
     font-family: var(--font-mono);
     font-size: var(--font-size-base);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+    /* Deliberately NOT -webkit-font-smoothing: antialiased. On macOS that thins
+       glyphs, and light text on a near-black ground is exactly where thinning
+       reads as fuzz. Default subpixel rendering keeps the stems solid. */
 }
 
 #root {
@@ -96,7 +98,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 1.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .nav-bar a {
@@ -123,8 +125,8 @@ section {
     display: flex;
     align-items: baseline;
     gap: 0.6ch;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
 }

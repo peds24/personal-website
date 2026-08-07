@@ -17,7 +17,7 @@ const Layout: React.FC = () => {
     return (
         <div className="home">
             <main className="home-stage">
-                <AsciiTorus cols={74} rows={30} />
+                <AsciiTorus />
 
                 <h1 className="home-name">
                     <Wordmark />

@@ -4,23 +4,32 @@
     color: var(--accent);
     line-height: 1;
     white-space: pre;
-    /* Fixed character grid — scroll itself rather than push the page sideways. */
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    font-size: 8px;
-    text-shadow: 0 0 10px color-mix(in srgb, var(--accent), transparent 80%);
+    /* Sized so the grid always fits its own box — never a scrollbar on the hero. */
+    overflow: hidden;
+    font-size: 13px;
+    text-shadow: 0 0 12px color-mix(in srgb, var(--accent), transparent 78%);
     user-select: none;
 }
 
-@media (max-width: 48rem) {
-    .ascii-torus {
-        font-size: 6px;
-    }
+/* Laptop / small desktop */
+@media (max-width: 75rem) {
+    .ascii-torus { font-size: 11px; }
 }
 
-@media (max-width: 30rem) {
-    .ascii-torus {
-        font-size: 4.5px;
-    }
+/* Tablet */
+@media (max-width: 60rem) {
+    .ascii-torus { font-size: 9px; }
+}
+
+@media (max-width: 48rem) {
+    .ascii-torus { font-size: 7.5px; }
+}
+
+/* Phone — component swaps to the 48x28 grid here, so it can go back up in size. */
+@media (max-width: 40rem) {
+    .ascii-torus { font-size: 9px; }
+}
+
+@media (max-width: 26rem) {
+    .ascii-torus { font-size: 7px; }
 }
