@@ -80,7 +80,9 @@ It covers:
 - **Layout variants** — three ways to open the home page (boot sequence, torus hero,
   directory listing) and two project treatments (cards vs. hairline rows), each with a
   written verdict on the trade-off.
-- **Open questions** — the decisions still outstanding, each with a recommendation.
+- **Decisions** — all five settled and built, each recorded with the reasoning and the
+  file it landed in: torus hero for the home page, expanding rows for projects, the ASCII
+  portrait on `/about`, self-hosted Space Mono, and dark-only with no theme toggle.
 
 Treat it as the source of truth for color, spacing, and motif usage. If the implementation
 and the artifact disagree, one of them needs updating — decide which before writing more
