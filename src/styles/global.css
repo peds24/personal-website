@@ -17,6 +17,10 @@
 }
 body{
     margin: 0;
+    /* --font-family-primary was declared but never applied, so the home page
+       fell back to serif while the rest of the site used the mono stack. */
+    font-family: var(--font-family-primary), var(--font-family-fallback);
+    font-size: var(--font-size-base);
 }
 a {
     color: var(--primary-color, green);

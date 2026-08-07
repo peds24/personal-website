@@ -1,0 +1,23 @@
+{
+  "name": "Pedro Serdio Hank",
+  "label": "Software Engineer",
+  "email": "serdiopedro@gmail.com",
+  "location": "Mexico City, Mexico",
+  "links": {
+    "github": "https://github.com/peds24",
+    "linkedin": "https://www.linkedin.com/in/psh2323/",
+    "linktree": "https://linktr.ee/peds24",
+    "spotify": "https://open.spotify.com/user/serdioped1?si=6ee94dec890e4a15"
+  },
+  "about": [
+    "I'm a <strong>dedicated</strong> and efficient individual with a strong work ethic, committed to achieving goals through persistent effort.",
+    "I'm a <strong>passionate</strong> learner who actively engages with educational content, particularly through insightful video essays on YouTube, and has an insatiable curiosity that extends to exploring diverse books.",
+    "I'm <strong>keenly interested</strong> in all facets of technology, staying abreast of the latest advancements and emerging trends in the tech world."
+  ],
+  "quote": {
+    "text": "Nothing, to my way of thinking, is a better proof of a well ordered mind than a man's ability to stop just where he is and pass some time in his own company.",
+    "author": "Lucius Annaeus Seneca",
+    "source": "Letters from a Stoic"
+  },
+  "digitalArchives": "I meticulously curate my music collection through a deliberate process: discovering exactly 30 songs at a time before organizing them into carefully crafted playlists. These collections serve as my personal digital archives, housing both my most frequently played tracks and thoughtfully curated selections."
+}

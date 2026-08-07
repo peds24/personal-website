@@ -1,0 +1,68 @@
+[
+  {
+    "id": "developer-journal-webscribe",
+    "title": "WebScribe — Developer Journal WebApp",
+    "role": "Front-end Developer",
+    "languages": "HTML, CSS, JS",
+    "link": "https://github.com/cse110-sp24-group17/cse110-sp24-group17",
+    "featured": true,
+    "description": "A local-first developer journal built as a team project. Evolved from ocean-themed wireframes into a modern, minimalist interface featuring transparent rotating panes with a matte glass aesthetic, multiple color schemes, and interactive elements like volume control and sliding animations. The design uses background-only color tagging for a distinctive look, inspired by Obsidian, Fantastical, and TickTick.",
+    "imageLarge": "/images/webscribe.png",
+    "imageSmall": "/images/webLang.png"
+  },
+  {
+    "id": "digital-book-library",
+    "title": "Digital Book Library Tool",
+    "role": "Fullstack Developer",
+    "languages": "Python",
+    "link": "https://github.com/peds24/personal-library-database",
+    "featured": true,
+    "description": "A full-stack Python application integrating the Google Books API for metadata retrieval, managing diverse media types including books, comics, and manga. Supports manual entry, individual ISBN lookups, and bulk imports to streamline collection management. Built on a modular, extensible codebase that separates API handling, database management, and core functionality.",
+    "imageLarge": "/images/digitalLibrary.png",
+    "imageSmall": ""
+  },
+  {
+    "id": "pokemon-vault-cli",
+    "title": "Pokémon Vault CLI",
+    "role": "Full-Stack Developer",
+    "languages": "Node.js, SQLite",
+    "link": "https://github.com/peds24/pokemon-vault-cli",
+    "featured": true,
+    "description": "A command-line application for searching and managing Pokémon cards, backed by the Pokémon TCG API and a local-first SQLite database. Reduces the search-to-save flow from six-plus manual steps to a single command, with looped search, ENG/JPN language support, CSV export, and one-command vault clearing.",
+    "imageLarge": "",
+    "imageSmall": ""
+  },
+  {
+    "id": "personal-portfolio-website",
+    "title": "Personal Portfolio Website",
+    "role": "Front-end Developer",
+    "languages": "HTML, CSS, JS",
+    "link": "https://github.com/peds24/cse134b-hw5-personal-website",
+    "featured": false,
+    "description": "A personal portfolio website showcasing my projects, work experience, and contact information. Features a responsive design, interactive elements, custom web components for project cards, and a functional contact form with client-side validation.",
+    "imageLarge": "/images/portfolioWeb.png",
+    "imageSmall": "/images/webLang.png"
+  },
+  {
+    "id": "huffman-compression",
+    "title": "Compress/Uncompress a File",
+    "role": "Developer",
+    "languages": "C++",
+    "link": "private",
+    "featured": false,
+    "description": "A C++ tool using Huffman encoding for text file compression and decompression. Includes a compression program for optimized character representation and a decompression program that reconstructs the original text, with a header format carrying character frequency data.",
+    "imageLarge": "/images/encoding.jpg",
+    "imageSmall": "/images/C.png"
+  },
+  {
+    "id": "graph-project",
+    "title": "Graph Project",
+    "role": "Developer",
+    "languages": "C++",
+    "link": "private",
+    "featured": false,
+    "description": "A custom C++ graph class developed for an advanced data structures course at UCSD. Implements Dijkstra's algorithm, a modified BFS for shortest paths, and a Disjoint Set for connected components with threshold constraints. Focused on runtime efficiency and adherence to API specifications.",
+    "imageLarge": "/images/graphProj.png",
+    "imageSmall": "/images/C.png"
+  }
+]

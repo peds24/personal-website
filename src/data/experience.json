@@ -1,0 +1,47 @@
+{
+  "software": [
+    {
+      "id": "banorte-swe-intern",
+      "role": "Software Engineer Intern",
+      "company": "Banorte",
+      "location": "CDMX, Mexico",
+      "start": "July 2024",
+      "end": "October 2024",
+      "bullets": [
+        "Created an efficiency-focused Proof of Concept application that automated document template generation and form completion, transforming a labor-intensive 8-12 week process into a streamlined one-week workflow.",
+        "Designed and implemented a microservice-based cloud architecture using Java/Quarkus, featuring containerized deployment for a Gemini-powered conversational AI application.",
+        "Engineered JavaScript-based frontend components that interfaced with backend services and Google Vertex AI for intelligent natural language processing capabilities.",
+        "Collaborated with cross-functional teams for this 12-week project, including Cyber Security, Project Managers, AI/ML Coders, and Cloud Developers."
+      ]
+    },
+    {
+      "id": "caliente-qa-intern",
+      "role": "Software QA Intern",
+      "company": "Grupo Caliente",
+      "location": "CDMX, Mexico",
+      "start": "July 2023",
+      "end": "August 2023",
+      "bullets": [
+        "Gained extensive experience with agile workflows, sprint planning, and cross-functional collaboration in a fast-paced software development environment, learning to prioritize bug fixes and feature development based on business impact.",
+        "Collaborated effectively across multiple development teams including Back End, Front End, App Dev, and Web Dev for major betting websites www.caliente.mx and winner.mx.",
+        "Ensured overall quality of new features and enhancements across desktop and mobile platforms through comprehensive testing procedures.",
+        "Developed understanding of complete software development lifecycle, from requirements gathering through deployment and maintenance phases."
+      ]
+    }
+  ],
+  "additional": [
+    {
+      "id": "ucsd-bookstore",
+      "role": "Sales Associate",
+      "company": "UCSD Bookstore",
+      "location": "San Diego, CA",
+      "start": "May 2022",
+      "end": "March 2025",
+      "bullets": [
+        "Provided personalized assistance and guidance to customers, creating a positive shopping experience through effective communication and building rapport.",
+        "Played a pivotal role in achieving sales targets, promoting Apple products, handling transactions, and keeping an organized and efficient workspace.",
+        "Responsible for opening and closing procedures, alongside providing support in comprehensive training to new hires, ensuring smooth integration into operational protocols at the school bookstore."
+      ]
+    }
+  ]
+}
