@@ -99,7 +99,7 @@
 }
 
 .prose {
-    max-width: var(--measure);
+    max-width: 100%;
 }
 
 .prose p {
@@ -284,7 +284,7 @@
     margin-bottom: 0.45rem;
     font-size: 1rem;
     color: var(--muted);
-    max-width: var(--measure);
+    max-width: 100%;
 }
 
 .job-card li::marker {
@@ -301,7 +301,7 @@
     margin: 2.5rem 0;
     padding-left: 1.25rem;
     border-left: 2px solid var(--accent);
-    max-width: var(--measure);
+    max-width: 100%;
 }
 
 .quote p {
