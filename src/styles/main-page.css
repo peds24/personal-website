@@ -23,7 +23,9 @@
     /* The h1 wraps a .wordmark span, so zero the heading's own default margin
        or the flex gap gets doubled. */
     margin: 0;
-    font-size: clamp(2.25rem, 9vw, 4.5rem);
+    /* Floor is low enough that the full "pedro.serdio.hank" still fits a 320px
+       phone; below ~26rem the vw term is what's actually in play. */
+    font-size: clamp(1.5rem, 8.5vw, 4.5rem);
     line-height: 1;
 }
 
