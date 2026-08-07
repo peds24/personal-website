@@ -62,26 +62,69 @@
     color: var(--accent);
 }
 
-/* ASCII portrait — lives on /about now. Amber instead of the old green. */
+/* ── ASCII portrait (on /about) ──────────────────────────────────────
+   Two fixed grids, 78 and 46 columns, swapped at the phone breakpoint. Sized in
+   `ch` so the block is exactly as wide as its own character grid and never
+   needs a scrollbar: 78ch of Space Mono at font-size F is 78 * 0.6 * F. */
+
 #preComp {
     display: flex;
     justify-content: center;
 }
 
-#preComp pre {
-    width: fit-content;
+.ascii-portrait {
     margin: 0;
-    font-size: 8px;
-    line-height: 1;
     font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1;
+    white-space: pre;
     color: var(--accent);
-    background-color: color-mix(in srgb, var(--accent), transparent 94%);
-    overflow-x: auto;
-    max-width: 100%;
+    background-color: color-mix(in srgb, var(--accent), transparent 95%);
+    padding: 1rem;
+    user-select: none;
+    overflow: hidden;
 }
 
-@media (max-width: 30rem) {
-    #preComp pre {
-        font-size: 5px;
+.ascii-portrait.is-narrow { display: none; }
+
+/* Tablet: shrink the wide grid rather than switching to the coarse one. */
+@media (max-width: 60rem) {
+    .ascii-portrait { font-size: 9px; }
+}
+
+@media (max-width: 48rem) {
+    .ascii-portrait { font-size: 7px; }
+}
+
+/* Phone: the wide grid would be ~5px per glyph, so use the 46-column art. */
+@media (max-width: 40rem) {
+    .ascii-portrait.is-wide { display: none; }
+    .ascii-portrait.is-narrow { display: block; font-size: 9px; }
+}
+
+@media (max-width: 26rem) {
+    .ascii-portrait.is-narrow { font-size: 7px; padding: 0.5rem; }
+}
+
+/* ── tablet & phone ──────────────────────────────────────────────── */
+
+@media (max-width: 60rem) {
+    .home-stage {
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 40rem) {
+    .home-stage {
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .home-line {
+        font-size: 0.9375rem;
+    }
+
+    .home-nav {
+        gap: 0.75rem 1.25rem;
     }
 }

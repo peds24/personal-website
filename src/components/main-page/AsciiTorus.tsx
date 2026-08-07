@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../styles/torus.css';
 
 /**
@@ -12,10 +12,9 @@ import '../../styles/torus.css';
 
 const RAMP = '.,-~:;=!*#$@';
 
-// Deliberately slow: a full turn takes ~40s and ~70s on the two axes, so the
-// shape reads as ambient rather than as an animation demanding attention.
-const SPEED_A = 0.16;
-const SPEED_B = 0.09;
+// Ambient, but actually moving: ~11s and ~20s per turn on the two axes.
+const SPEED_A = 0.55;
+const SPEED_B = 0.31;
 
 // Start part-way round. At A=0 the torus is edge-on — a flat smear — and at this
 // speed it would take ~10s to open up. Landing on an already-good pose matters
@@ -27,6 +26,23 @@ const R1 = 1; // tube radius
 const R2 = 2; // ring radius
 const K2 = 5; // distance from viewer
 
+const NARROW = '(max-width: 40rem)';
+
+/** Tracks a media query without a resize listener. */
+function useNarrow(): boolean {
+    const [narrow, setNarrow] = useState(
+        () => typeof window !== 'undefined' && window.matchMedia(NARROW).matches,
+    );
+    useEffect(() => {
+        const mq = window.matchMedia(NARROW);
+        const on = (e: MediaQueryListEvent) => setNarrow(e.matches);
+        mq.addEventListener('change', on);
+        setNarrow(mq.matches);
+        return () => mq.removeEventListener('change', on);
+    }, []);
+    return narrow;
+}
+
 interface Props {
     /** Grid width in characters. */
     cols?: number;
@@ -35,18 +51,30 @@ interface Props {
     className?: string;
 }
 
-const AsciiTorus: React.FC<Props> = ({ cols = 74, rows = 30, className = '' }) => {
+/**
+ * Grid must clear the widest projection the rotation reaches, not the pose it
+ * happens to start in. Swept over both axes, the shape needs ±35.6 cells across
+ * and ±17.8 down — 74x30 clipped the top and bottom off every turn.
+ */
+const AsciiTorus: React.FC<Props> = ({ cols, rows, className = '' }) => {
     const ref = useRef<HTMLPreElement>(null);
+    const narrow = useNarrow();
+
+    // A phone can't shrink the 76-column grid to fit without the glyphs turning
+    // to mush, so it gets a coarser torus at a legible size instead. Both grids
+    // were swept for clipping; see the note above.
+    const gridCols = cols ?? (narrow ? 48 : 76);
+    const gridRows = rows ?? (narrow ? 28 : 38);
 
     useEffect(() => {
         const el = ref.current;
         if (!el) return;
 
-        const kx = (cols * K2 * 3) / (8 * (R1 + R2));
+        const kx = (gridCols * K2 * 3) / (8 * (R1 + R2));
         const ky = kx * 0.5; // character cells are roughly twice as tall as wide
 
-        const zbuf = new Float32Array(cols * rows);
-        const out = new Array<string>(cols * rows);
+        const zbuf = new Float32Array(gridCols * gridRows);
+        const out = new Array<string>(gridCols * gridRows);
 
         const draw = (a: number, b: number) => {
             zbuf.fill(0);
@@ -68,11 +96,11 @@ const AsciiTorus: React.FC<Props> = ({ cols = 74, rows = 30, className = '' }) =
                     const z = K2 + cA * circleX * sp + circleY * sA;
                     const ooz = 1 / z;
 
-                    const xp = Math.trunc(cols / 2 + kx * ooz * x);
-                    const yp = Math.trunc(rows / 2 - ky * ooz * y);
-                    if (xp < 0 || xp >= cols || yp < 0 || yp >= rows) continue;
+                    const xp = Math.trunc(gridCols / 2 + kx * ooz * x);
+                    const yp = Math.trunc(gridRows / 2 - ky * ooz * y);
+                    if (xp < 0 || xp >= gridCols || yp < 0 || yp >= gridRows) continue;
 
-                    const idx = xp + cols * yp;
+                    const idx = xp + gridCols * yp;
                     const lum =
                         cp * ct * sB - cA * ct * sp - sA * st +
                         cB * (cA * st - ct * sA * sp);
@@ -86,7 +114,7 @@ const AsciiTorus: React.FC<Props> = ({ cols = 74, rows = 30, className = '' }) =
             }
 
             let s = '';
-            for (let r = 0; r < rows; r++) s += out.slice(r * cols, r * cols + cols).join('') + '\n';
+            for (let r = 0; r < gridRows; r++) s += out.slice(r * gridCols, r * gridCols + gridCols).join('') + '\n';
             el.textContent = s;
         };
 
@@ -123,7 +151,7 @@ const AsciiTorus: React.FC<Props> = ({ cols = 74, rows = 30, className = '' }) =
             if (raf) cancelAnimationFrame(raf);
             document.removeEventListener('visibilitychange', onVisibility);
         };
-    }, [cols, rows]);
+    }, [gridCols, gridRows]);
 
     return <pre ref={ref} className={`ascii-torus ${className}`} aria-hidden="true" />;
 };
