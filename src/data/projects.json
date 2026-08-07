@@ -1,5 +1,27 @@
 [
   {
+    "id": "ai-resume-builder",
+    "title": "AI-Powered Resume Builder",
+    "role": "Personal Project",
+    "languages": "Python, Anthropic Claude API",
+    "link": "https://github.com/peds24/resume-builder",
+    "featured": true,
+    "description": "An AI-driven resume generation tool that tailors a resume to a specific job description by analyzing role requirements against a candidate profile. Uses the Anthropic Claude API to match skills, experience, and qualifications to a posting, a JSON-based profile system that decouples content from presentation, and automated Word template processing to emit production-ready documents. End to end it turns a raw job description into a customized resume from the command line.",
+    "imageLarge": "",
+    "imageSmall": ""
+  },
+  {
+    "id": "reading-buddy",
+    "title": "Reading Buddy",
+    "role": "Full-Stack Application (In Progress)",
+    "languages": "TypeScript, React Native, Expo, Supabase",
+    "link": "https://github.com/peds24/book-buddy",
+    "featured": true,
+    "description": "A cross-platform application for web and mobile that manages personal reading libraries and tracks reading activity. Built on Expo, React Native, and TypeScript with Supabase handling authentication, database, and row-level security. Supports user-scoped libraries with full CRUD, categorization, filtering, and reading-status tracking across multiple media types, with an AI-powered recommendation system in prototype.",
+    "imageLarge": "",
+    "imageSmall": ""
+  },
+  {
     "id": "developer-journal-webscribe",
     "title": "WebScribe — Developer Journal WebApp",
     "role": "Front-end Developer",

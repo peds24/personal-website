@@ -1,6 +1,34 @@
 {
   "software": [
     {
+      "id": "mondelez-ai-engineer",
+      "role": "AI Engineer",
+      "company": "Mondelez Mexico",
+      "location": "CDMX, Mexico",
+      "start": "May 2026",
+      "end": "Present",
+      "bullets": [
+        "Spearhead initiatives to integrate AI into daily workflows, providing training and support to empower employees with advanced automation and intelligence tools.",
+        "Lead comprehensive training programs on data visualization and BI tools, including Amazon Quick and Databricks, to streamline dashboard creation and data-driven decision-making.",
+        "Collaborate with cross-functional departments to identify opportunities for AI-driven process improvements, significantly reducing manual effort and increasing operational efficiency.",
+        "Develop and maintain internal AI documentation and support resources, serving as a key technical advisor for implementing AI-driven business intelligence strategies."
+      ]
+    },
+    {
+      "id": "microsoft-support-engineer",
+      "role": "Technical Support Engineer",
+      "company": "Microsoft",
+      "location": "CDMX, Mexico",
+      "start": "January 2026",
+      "end": "May 2026",
+      "bullets": [
+        "Provided enterprise-level technical support for Azure Database services (PostgreSQL/MySQL Flexible Server), diagnosing complex issues across compute, networking, authentication, and storage layers.",
+        "Led troubleshooting and resolution of production-critical incidents, including major/minor version upgrades, maintenance failures, performance degradation, and service availability constraints.",
+        "Acted as the primary technical point of contact for customers, delivering clear, structured, and empathetic communication while setting expectations and driving cases toward resolution or archival.",
+        "Collaborated directly with Azure Engineering, Product Groups, and global support teams to investigate platform limitations, validate mitigations, and communicate outcomes to stakeholders."
+      ]
+    },
+    {
       "id": "banorte-swe-intern",
       "role": "Software Engineer Intern",
       "company": "Banorte",
