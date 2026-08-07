@@ -1,10 +1,19 @@
+import { Route, Routes } from 'react-router-dom'
 import Layout from './components/main-page/Layout'
+import Projects from './pages/Projects'
+import WorkExp from './pages/WorkExp'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <Layout>
-
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Layout />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/work-exp" element={<WorkExp />} />
+      <Route path="/contact-me" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 

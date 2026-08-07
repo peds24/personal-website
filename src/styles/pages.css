@@ -1,0 +1,170 @@
+/* Shared chrome for the non-home pages. Follows the home page's terminal
+   idiom: monospace, lowercase headings, accent-colored links. */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-primary), var(--font-family-fallback);
+    color: var(--text-color);
+}
+
+.page header {
+    padding: 1rem 0 0.5rem;
+}
+
+.page header .nav-bar {
+    margin-bottom: 0.75rem;
+}
+
+.page .nav-bar .active {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.page main {
+    flex: 1;
+    width: min(70rem, 92vw);
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.page h1 {
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.section-heading {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 1rem;
+    border-top: 1px solid color-mix(in srgb, var(--text-color), transparent 70%);
+    padding-top: 1rem;
+}
+
+.page footer {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    padding: 1rem 0;
+}
+
+/* --- projects --- */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid color-mix(in srgb, var(--text-color), transparent 75%);
+    background-color: color-mix(in srgb, var(--primary-color), transparent 92%);
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid color-mix(in srgb, var(--text-color), transparent 75%);
+}
+
+/* Phone screenshots: show the whole frame rather than cropping a landscape
+   slice out of the middle. Contained, so the aspect ratio is never distorted. */
+.project-image--portrait {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background-color: color-mix(in srgb, var(--text-color), transparent 92%);
+    padding: 0.5rem 0;
+}
+
+.project-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.project-body h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.project-meta {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+.project-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Push the link to the bottom so cards in a row align. */
+.project-body > :last-child {
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-private {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* --- work experience --- */
+
+.job-card {
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.job-card h3 {
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.job-meta {
+    margin: 0.15rem 0 0;
+    font-size: 0.9rem;
+}
+
+.job-dates {
+    margin: 0.15rem 0 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.job-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.job-card li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- contact --- */
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 40rem) {
+    .page h1 { font-size: 1.5rem; }
+    .nav-bar { flex-wrap: wrap; gap: 0.5rem; }
+}

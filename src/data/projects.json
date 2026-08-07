@@ -1,0 +1,122 @@
+[
+  {
+    "id": "library-archive",
+    "title": "Library Archive",
+    "role": "Mobile Developer",
+    "languages": "TypeScript, Expo, React Native, SQLite",
+    "link": "https://github.com/peds24/library-archive",
+    "featured": true,
+    "description": "An offline-first book tracker for a home library. Point the camera at a barcode and the book — title, author, cover, genre, page count, publish date — appears seconds later, pulled from a live book database instead of typed by hand. A bulk scan mode loops back to the camera so a whole shelf can be catalogued in one pass. No account, no sync, no backend; a local SQLite database is the source of truth.",
+    "imageLarge": "/images/library-archive.jpg",
+    "imageSmall": "",
+    "imagePortrait": true
+  },
+  {
+    "id": "longbox",
+    "title": "Longbox",
+    "role": "Mobile Developer",
+    "languages": "TypeScript, Expo, React Native, SQLite",
+    "link": "https://github.com/peds24/longbox",
+    "featured": true,
+    "description": "A comic-reading tracker for iOS and Android. Every comic is Backlog, Reading, or Read — owning a comic and having read it are different facts, so a book you bought but haven't opened has somewhere to live that isn't \"currently reading.\" Add issues by scanning a UPC or ISBN, entering a code by hand, or searching by title, with a confirm step before anything is saved. Marking a single issue read checks the API for a real next issue and offers to queue it.",
+    "imageLarge": "/images/longbox.png",
+    "imageSmall": "",
+    "imagePortrait": true
+  },
+  {
+    "id": "ai-resume-builder",
+    "title": "AI-Powered Resume Builder",
+    "role": "Personal Project",
+    "languages": "Python, Anthropic Claude API",
+    "link": "https://github.com/peds24/resume-builder",
+    "featured": true,
+    "description": "An AI-driven resume generation tool that tailors a resume to a specific job description by analyzing role requirements against a candidate profile. Uses the Anthropic Claude API to match skills, experience, and qualifications to a posting, a JSON-based profile system that decouples content from presentation, and automated Word template processing to emit production-ready documents. End to end it turns a raw job description into a customized resume from the command line.",
+    "imageLarge": "",
+    "imageSmall": "",
+    "imagePortrait": false
+  },
+  {
+    "id": "reading-buddy",
+    "title": "Reading Buddy",
+    "role": "Full-Stack Application (In Progress)",
+    "languages": "TypeScript, React Native, Expo, Supabase",
+    "link": "https://github.com/peds24/book-buddy",
+    "featured": true,
+    "description": "A cross-platform application for web and mobile that manages personal reading libraries and tracks reading activity. Built on Expo, React Native, and TypeScript with Supabase handling authentication, database, and row-level security. Supports user-scoped libraries with full CRUD, categorization, filtering, and reading-status tracking across multiple media types, with an AI-powered recommendation system in prototype.",
+    "imageLarge": "",
+    "imageSmall": "",
+    "imagePortrait": false
+  },
+  {
+    "id": "developer-journal-webscribe",
+    "title": "WebScribe — Developer Journal WebApp",
+    "role": "Front-end Developer",
+    "languages": "HTML, CSS, JS",
+    "link": "https://github.com/cse110-sp24-group17/cse110-sp24-group17",
+    "featured": true,
+    "description": "A local-first developer journal built as a team project. Evolved from ocean-themed wireframes into a modern, minimalist interface featuring transparent rotating panes with a matte glass aesthetic, multiple color schemes, and interactive elements like volume control and sliding animations. The design uses background-only color tagging for a distinctive look, inspired by Obsidian, Fantastical, and TickTick.",
+    "imageLarge": "/images/webscribe.png",
+    "imageSmall": "/images/webLang.png",
+    "imagePortrait": false
+  },
+  {
+    "id": "digital-book-library",
+    "title": "Digital Book Library Tool",
+    "role": "Fullstack Developer",
+    "languages": "Python",
+    "link": "https://github.com/peds24/personal-library-database",
+    "featured": true,
+    "description": "A full-stack Python application integrating the Google Books API for metadata retrieval, managing diverse media types including books, comics, and manga. Supports manual entry, individual ISBN lookups, and bulk imports to streamline collection management. Built on a modular, extensible codebase that separates API handling, database management, and core functionality.",
+    "imageLarge": "/images/digitalLibrary.png",
+    "imageSmall": "",
+    "imagePortrait": false
+  },
+  {
+    "id": "pokemon-vault-cli",
+    "title": "Pokémon Vault CLI",
+    "role": "Full-Stack Developer",
+    "languages": "Node.js, SQLite",
+    "link": "https://github.com/peds24/pokemon-vault-cli",
+    "featured": true,
+    "description": "A command-line application for searching and managing Pokémon cards, backed by the Pokémon TCG API and a local-first SQLite database. Reduces the search-to-save flow from six-plus manual steps to a single command, with looped search, ENG/JPN language support, CSV export, and one-command vault clearing.",
+    "imageLarge": "",
+    "imageSmall": "",
+    "imagePortrait": false
+  },
+  {
+    "id": "personal-portfolio-website",
+    "title": "Personal Portfolio Website",
+    "role": "Front-end Developer",
+    "languages": "HTML, CSS, JS",
+    "link": "https://github.com/peds24/cse134b-hw5-personal-website",
+    "featured": false,
+    "description": "A personal portfolio website showcasing my projects, work experience, and contact information. Features a responsive design, interactive elements, custom web components for project cards, and a functional contact form with client-side validation.",
+    "imageLarge": "/images/portfolioWeb.png",
+    "imageSmall": "/images/webLang.png",
+    "imagePortrait": false
+  },
+  {
+    "id": "huffman-compression",
+    "title": "Compress/Uncompress a File",
+    "role": "Developer",
+    "languages": "C++",
+    "link": "private",
+    "featured": false,
+    "description": "A C++ tool using Huffman encoding for text file compression and decompression. Includes a compression program for optimized character representation and a decompression program that reconstructs the original text, with a header format carrying character frequency data.",
+    "imageLarge": "/images/encoding.jpg",
+    "imageSmall": "/images/C.png",
+    "imagePortrait": false
+  },
+  {
+    "id": "graph-project",
+    "title": "Graph Project",
+    "role": "Developer",
+    "languages": "C++",
+    "link": "private",
+    "featured": false,
+    "description": "A custom C++ graph class developed for an advanced data structures course at UCSD. Implements Dijkstra's algorithm, a modified BFS for shortest paths, and a Disjoint Set for connected components with threshold constraints. Focused on runtime efficiency and adherence to API specifications.",
+    "imageLarge": "/images/graphProj.png",
+    "imageSmall": "/images/C.png",
+    "imagePortrait": false
+  }
+]

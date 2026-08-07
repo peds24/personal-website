@@ -1,0 +1,75 @@
+{
+  "software": [
+    {
+      "id": "mondelez-ai-engineer",
+      "role": "AI Engineer",
+      "company": "Mondelez Mexico",
+      "location": "CDMX, Mexico",
+      "start": "May 2026",
+      "end": "Present",
+      "bullets": [
+        "Spearhead initiatives to integrate AI into daily workflows, providing training and support to empower employees with advanced automation and intelligence tools.",
+        "Lead comprehensive training programs on data visualization and BI tools, including Amazon Quick and Databricks, to streamline dashboard creation and data-driven decision-making.",
+        "Collaborate with cross-functional departments to identify opportunities for AI-driven process improvements, significantly reducing manual effort and increasing operational efficiency.",
+        "Develop and maintain internal AI documentation and support resources, serving as a key technical advisor for implementing AI-driven business intelligence strategies."
+      ]
+    },
+    {
+      "id": "microsoft-support-engineer",
+      "role": "Technical Support Engineer",
+      "company": "Microsoft",
+      "location": "CDMX, Mexico",
+      "start": "January 2026",
+      "end": "May 2026",
+      "bullets": [
+        "Provided enterprise-level technical support for Azure Database services (PostgreSQL/MySQL Flexible Server), diagnosing complex issues across compute, networking, authentication, and storage layers.",
+        "Led troubleshooting and resolution of production-critical incidents, including major/minor version upgrades, maintenance failures, performance degradation, and service availability constraints.",
+        "Acted as the primary technical point of contact for customers, delivering clear, structured, and empathetic communication while setting expectations and driving cases toward resolution or archival.",
+        "Collaborated directly with Azure Engineering, Product Groups, and global support teams to investigate platform limitations, validate mitigations, and communicate outcomes to stakeholders."
+      ]
+    },
+    {
+      "id": "banorte-swe-intern",
+      "role": "Software Engineer Intern",
+      "company": "Banorte",
+      "location": "CDMX, Mexico",
+      "start": "July 2024",
+      "end": "October 2024",
+      "bullets": [
+        "Created an efficiency-focused Proof of Concept application that automated document template generation and form completion, transforming a labor-intensive 8-12 week process into a streamlined one-week workflow.",
+        "Designed and implemented a microservice-based cloud architecture using Java/Quarkus, featuring containerized deployment for a Gemini-powered conversational AI application.",
+        "Engineered JavaScript-based frontend components that interfaced with backend services and Google Vertex AI for intelligent natural language processing capabilities.",
+        "Collaborated with cross-functional teams for this 12-week project, including Cyber Security, Project Managers, AI/ML Coders, and Cloud Developers."
+      ]
+    },
+    {
+      "id": "caliente-qa-intern",
+      "role": "Software QA Intern",
+      "company": "Grupo Caliente",
+      "location": "CDMX, Mexico",
+      "start": "July 2023",
+      "end": "August 2023",
+      "bullets": [
+        "Gained extensive experience with agile workflows, sprint planning, and cross-functional collaboration in a fast-paced software development environment, learning to prioritize bug fixes and feature development based on business impact.",
+        "Collaborated effectively across multiple development teams including Back End, Front End, App Dev, and Web Dev for major betting websites www.caliente.mx and winner.mx.",
+        "Ensured overall quality of new features and enhancements across desktop and mobile platforms through comprehensive testing procedures.",
+        "Developed understanding of complete software development lifecycle, from requirements gathering through deployment and maintenance phases."
+      ]
+    }
+  ],
+  "additional": [
+    {
+      "id": "ucsd-bookstore",
+      "role": "Sales Associate",
+      "company": "UCSD Bookstore",
+      "location": "San Diego, CA",
+      "start": "May 2022",
+      "end": "March 2025",
+      "bullets": [
+        "Provided personalized assistance and guidance to customers, creating a positive shopping experience through effective communication and building rapport.",
+        "Played a pivotal role in achieving sales targets, promoting Apple products, handling transactions, and keeping an organized and efficient workspace.",
+        "Responsible for opening and closing procedures, alongside providing support in comprehensive training to new hires, ensuring smooth integration into operational protocols at the school bookstore."
+      ]
+    }
+  ]
+}
