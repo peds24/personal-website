@@ -8,15 +8,17 @@ const About: React.FC = () => {
 
     return (
         <PageShell title="about">
-            <div className="prose">
-                {/* Bio paragraphs carry inline <strong> emphasis from profile.json. */}
-                {bio.map((para, i) => (
-                    <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
-                ))}
-            </div>
+            <div className="about-hero">
+                <div className="prose about-intro">
+                    {/* Bio paragraph carries inline <strong> emphasis from profile.json. */}
+                    {bio.map((para, i) => (
+                        <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
+                    ))}
+                </div>
 
-            <div className="portrait">
-                <AsciiArt />
+                <div className="portrait">
+                    <AsciiArt />
+                </div>
             </div>
 
             <blockquote className="quote">
