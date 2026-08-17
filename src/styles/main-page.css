@@ -75,7 +75,7 @@
 .ascii-portrait {
     margin: 0;
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 8.8px;
     line-height: 1;
     white-space: pre;
     color: var(--accent);
@@ -89,21 +89,21 @@
 
 /* Tablet: shrink the wide grid rather than switching to the coarse one. */
 @media (max-width: 60rem) {
-    .ascii-portrait { font-size: 9px; }
+    .ascii-portrait { font-size: 7.2px; }
 }
 
 @media (max-width: 48rem) {
-    .ascii-portrait { font-size: 7px; }
+    .ascii-portrait { font-size: 5.6px; }
 }
 
 /* Phone: the wide grid would be ~5px per glyph, so use the 46-column art. */
 @media (max-width: 40rem) {
     .ascii-portrait.is-wide { display: none; }
-    .ascii-portrait.is-narrow { display: block; font-size: 9px; }
+    .ascii-portrait.is-narrow { display: block; font-size: 7.2px; }
 }
 
 @media (max-width: 26rem) {
-    .ascii-portrait.is-narrow { font-size: 7px; padding: 0.5rem; }
+    .ascii-portrait.is-narrow { font-size: 5.6px; padding: 0.5rem; }
 }
 
 /* ── tablet & phone ──────────────────────────────────────────────── */
