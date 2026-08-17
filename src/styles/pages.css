@@ -295,9 +295,11 @@
 /* ── about ───────────────────────────────────────────────────────── */
 
 /* Mirrors the home stage: intro line stands in for the tagline, portrait
-   stands in for the torus — text first, image below, both centered. A rule
-   (not a heading) separates it from the quote/archives content that
-   follows, since this block has no label of its own. */
+   stands in for the torus — text first, image below, both centered. The
+   text runs the full width of the page (wider than the portrait) rather
+   than being capped narrow. A rule (not a heading) separates this block
+   from the quote/archives content that follows, since it has no label of
+   its own. */
 .about-hero {
     display: flex;
     flex-direction: column;
@@ -311,7 +313,7 @@
 }
 
 .about-intro {
-    max-width: 46ch;
+    width: 100%;
     text-align: center;
 }
 
