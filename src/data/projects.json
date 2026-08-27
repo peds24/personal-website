@@ -1,5 +1,17 @@
 [
   {
+    "id": "track-it",
+    "title": "Track It",
+    "role": "Mobile Developer",
+    "languages": "TypeScript, Expo, React Native, SQLite",
+    "link": "https://github.com/peds24/track-it",
+    "featured": true,
+    "description": "A local-only mobile app for tracking shows, movies, books, comics, and manga as you watch and read them. A single flat \"Currently\" list, ordered by most recently advanced, shows what's in progress and lets one tap mark the current episode, issue, or volume done and start the next. Ongoing series with no known final count grow one entry at a time instead of showing a fraction, and pausing a track never resets its progress. No accounts, no cloud sync, no cover art — just SQLite on the device.",
+    "imageLarge": "",
+    "imageSmall": "",
+    "imagePortrait": false
+  },
+  {
     "id": "library-archive",
     "title": "Library Archive",
     "role": "Mobile Developer",
