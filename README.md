@@ -120,10 +120,10 @@ public/
 `.github/workflows/deploy.yml` builds and publishes `dist/` to GitHub Pages on every push
 to `main`, and can be re-run from the Actions tab without a commit.
 
-The site is served from a project page at `/personal-website-reactTS/`. Two places depend
+The site is served from a project page at `/personal-website/`. Two places depend
 on that path and must stay in sync if the repo is renamed or a custom domain is added:
 
-- `base` in `vite.config.ts` (defaults to `/personal-website-reactTS/`, override with
+- `base` in `vite.config.ts` (defaults to `/personal-website/`, override with
   `BASE_PATH=/`)
 - `basename` in `src/main.tsx`, which reads it from `import.meta.env.BASE_URL`
 

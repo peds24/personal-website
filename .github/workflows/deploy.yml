@@ -30,7 +30,7 @@ jobs:
 
       - run: npm ci
 
-      # `base` in vite.config.ts defaults to /personal-website-reactTS/, which is
+      # `base` in vite.config.ts defaults to /personal-website/, which is
       # correct for a project page. If this repo is renamed to peds24.github.io
       # or gets a custom domain, set BASE_PATH: / here.
       - run: npm run build
