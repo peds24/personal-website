@@ -6,7 +6,7 @@ import { resolve } from 'node:path'
 // GitHub Pages serves this repo from /<repo>/ unless the repo is renamed to
 // peds24.github.io or a custom domain is set. Override with BASE_PATH=/ if that
 // changes — nothing else in the app hardcodes the prefix.
-const base = process.env.BASE_PATH ?? '/personal-website-reactTS/'
+const base = process.env.BASE_PATH ?? '/personal-website/'
 
 // GitHub Pages has no rewrite rules, so a hard load of /projects would 404.
 // Serving the SPA shell as 404.html makes deep links and refreshes work without
