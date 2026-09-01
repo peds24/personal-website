@@ -11,6 +11,16 @@
     user-select: none;
 }
 
+/* The dark theme's glow blooms light-on-black, which fills in the sparse ramp
+   characters (., ~, -) and reads as even density. On a light ground that same
+   translucent halo barely tints the background, so the sparse end of the ramp
+   goes visibly thin — bolding the face and tightening the shadow into a solid
+   near-field pass restores comparable weight. */
+[data-theme="light"] .ascii-torus {
+    font-weight: 700;
+    text-shadow: 0 0 1px var(--accent), 0 0 6px color-mix(in srgb, var(--accent), transparent 55%);
+}
+
 /* Laptop / small desktop */
 @media (max-width: 75rem) {
     .ascii-torus { font-size: 11px; }

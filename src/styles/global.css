@@ -18,11 +18,14 @@
 }
 
 /*
-  Single dark theme on purpose. A terminal has no light mode — this matches
-  comic-track/src/constants/theme.ts, which says the same thing. There is no
-  prefers-color-scheme block and no toggle; every color is painted explicitly.
+  Dark is the default palette (unthemed :root and explicit [data-theme="dark"]).
+  Light is an opt-in retro-console variant: warm tan-grey ground, maroon accent.
+  useTheme (src/hooks/useTheme.ts) resolves device preference vs. a stored
+  override and sets data-theme on <html>; the inline script in index.html sets
+  it before first paint so there's no flash.
 */
-:root {
+:root,
+:root[data-theme="dark"] {
     --bg: #0B0902;
     --surface: #171106;
     --border: #3D310E;
@@ -32,7 +35,21 @@
     --accent-ink: #1F1800;
     --success: #43D17A;
     --danger: #F2564B;
+}
 
+:root[data-theme="light"] {
+    --bg: #DCD6C8;
+    --surface: #E8E2D4;
+    --border: #B8AF98;
+    --text: #2B2620;
+    --muted: #6B6250;
+    --accent: #8C2F2F;
+    --accent-ink: #FBEFE7;
+    --success: #2F8C4E;
+    --danger: #B23A2E;
+}
+
+:root {
     /* Space Mono first, system mono as the fallback while it loads or if it fails. */
     --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
     /* The one soft face, used only for the name — the poster's soft/rigid tension. */
@@ -147,6 +164,33 @@ section {
 
 .wordmark .dot {
     color: var(--accent);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 0.7rem;
+    right: 1.25rem;
+    z-index: 20;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color var(--transition-duration) var(--transition-ease),
+        border-color var(--transition-duration) var(--transition-ease);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
