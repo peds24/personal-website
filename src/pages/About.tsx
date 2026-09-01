@@ -31,7 +31,7 @@ const About: React.FC = () => {
                 <p>{digitalArchives}</p>
             </div>
             <ul className="contact-list">
-                <li><a href={links.linktree} target="_blank" rel="noreferrer">the archives</a></li>
+                <li><a href={links.digitalArchives} target="_blank" rel="noreferrer">the archives</a></li>
                 <li><a href={links.spotify} target="_blank" rel="noreferrer">spotify</a></li>
             </ul>
         </PageShell>

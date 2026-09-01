@@ -2,14 +2,15 @@
   "name": "Pedro Serdio Hank",
   "label": "AI Engineer",
   "wordmark": "pedro.serdio.hank",
-  "tagline": "AI Engineer at Mondelez. I build small, sharp tools — mostly for tracking things I own.",
+  "tagline": "AI Engineer at Mondelez. I stay curious and learn by diving straight into whatever problem is in front of me.",
   "email": "serdiopedro@gmail.com",
   "location": "Mexico City, Mexico",
   "links": {
     "github": "https://github.com/peds24",
     "linkedin": "https://www.linkedin.com/in/psh2323/",
     "linktree": "https://linktr.ee/peds24",
-    "spotify": "https://open.spotify.com/user/serdioped1?si=6ee94dec890e4a15"
+    "spotify": "https://open.spotify.com/user/serdioped1?si=6ee94dec890e4a15",
+    "digitalArchives": "https://peds24.github.io/digital-archives-page/"
   },
   "about": [
     "I learn compulsively — video essays, books, whatever thread I'm pulling on that week. Most of it eventually circles back to technology, and to liking things I can understand well enough to rebuild smaller."

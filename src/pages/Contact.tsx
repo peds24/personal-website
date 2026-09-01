@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
                 <li><a className="link" href={`mailto:${email}`}>{email}</a></li>
                 <li><a className="link" href={links.linkedin} target="_blank" rel="noreferrer">linkedin</a></li>
                 <li><a className="link" href={links.github} target="_blank" rel="noreferrer">github</a></li>
-                <li><a className="link" href={links.linktree} target="_blank" rel="noreferrer">digital archives</a></li>
+                <li><a className="link" href={links.digitalArchives} target="_blank" rel="noreferrer">digital archives</a></li>
                 <li><a className="link" href={`${base}/assets/pedro-serdio-hank-CV.pdf`}>my-resume.pdf</a></li>
             </ul>
         </PageShell>
